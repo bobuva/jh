@@ -1,0 +1,28 @@
+# git aliases I use
+
+git aliases allow you to type less characters for a command. Here are a  few aliases that I am using right now. I'll present them in two formats:
+
+	* configuration file view : as they would  appear in your .gitconfig file.
+	* command-line commands : the commands you would make on the git bash command line to add the aliases to your global configuration.
+
+
+## Configuration File View
+
+[alias]
+	st = status
+	co = checkout
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+
+## Command-Line Commands
+
+	$ git config --global alias.st status
+
+	$ git config --global alias.co checkout
+
+	$ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+	You should copy and paste that last command (it's all one command) rather than try to type it out to avoid error.
+	
+	Reference: for the git lg alias, I obtained this nice alias from https://coderwall.com/p/euwpig
+
